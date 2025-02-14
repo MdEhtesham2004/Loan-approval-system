@@ -1,0 +1,42 @@
+{
+    "0": {
+        "Model": "LogisticRegression()",
+        "Accuracy": 0.7,
+        "Precision": 0.2352941176470588,
+        "Recall": 0.1904761904761904,
+        "F1-Score": 0.2105263157894736,
+        "ROC-AUC": 0.512959614225437
+    },
+    "1": {
+        "Model": "KNeighborsClassifier()",
+        "Accuracy": 0.775,
+        "Precision": 0.2857142857142857,
+        "Recall": 0.0476190476190476,
+        "F1-Score": 0.0816326530612244,
+        "ROC-AUC": 0.5079867389993973
+    },
+    "2": {
+        "Model": "SVC()",
+        "Accuracy": 0.785,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1-Score": 0.0,
+        "ROC-AUC": 0.4968354430379746
+    },
+    "3": {
+        "Model": "DecisionTreeClassifier()",
+        "Accuracy": 0.735,
+        "Precision": 0.2962962962962963,
+        "Recall": 0.1904761904761904,
+        "F1-Score": 0.2318840579710145,
+        "ROC-AUC": 0.5351115129596142
+    },
+    "4": {
+        "Model": "RandomForestClassifier()",
+        "Accuracy": 0.79,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1-Score": 0.0,
+        "ROC-AUC": 0.5
+    }
+}

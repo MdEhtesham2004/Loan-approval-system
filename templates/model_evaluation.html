@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    .container{
+        height: 500px;
+        display: flex;
+    }
+    .buttons{
+        width: 35%;
+        text-align: center;
+        margin: 15px;
+        margin-top: 60px;
+    }
+    .buttons button{
+        margin: 10px;
+        margin-top: 20px;
+    }
+    .model_evaluation_area{
+        display: flex;
+        flex-direction: row;
+        width: 65%;
+        margin: 10px;
+        border: solid gray;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        margin-right: 100px;
+        background-color: rgb(238, 228, 228);
+        color: rgb(33, 119, 148);
+    }
+    .evaluation_images{
+        display: flex;
+        flex-direction: row;
+    }
+
+</style>
+<body>
+    
+<h2>Evaluate models</h2>                    
+    
+    <div class="container">
+        <div class="buttons">
+                <!-- Model Selection Buttons -->
+                <button type="submit"  id="logistic_regression" name="logistic_regression"  onclick="logress()">Logistic Regression</button>
+                <button type="submit" name="knn" onclick="knn()" >K-Nearest Neighbors</button>
+                <button type="submit" name="svc" onclick="svc()">Support Vector Classifier</button>
+                <button type="submit" name="decision_tree" onclick="ds()">Decision Tree</button>
+                <button type="submit" name="random_forest" onclick="rf()">Random Forest</button>
+                <button type="submit" name="compare_models" onclick="compare_models()">Compare Models</button>
+                <button type="submit" name="confusion_matrix_pic" onclick="confusion_matrix_pic()">Confusion Matrix</button>
+                <button type="submit" name="confusion_matrix_pic" onclick="plot_results()">plot_results</button>
+            
+        
+    </div>
+        <div class="model_evaluation_area"id="evaluation_area">
+            <!-- right side area where evaluation results print  -->
+             <!-- <input type="text" id="logistic_regression" name="logistic_regression"  hidden> -->
+             <h1>Model Evaluation Results</h1>   
+              
+          
+                <div class="logress" id="logress" hidden>
+                    Model:     {{ models['0']['Model'] }}, <br>
+                    Accuracy:  {{ models['0']['Accuracy'] }}, <br>
+                    Precision: {{ models['0']['Precision'] }}, <br>
+                    Recall:    {{ models['0']['Recall'] }}, <br>
+                    F1-Score:  {{ models['0']['F1-Score'] }}, <br>
+                    ROC-AUC:   {{ models['0']['ROC-AUC'] }} 
+                </div>
+                <br>
+                <hr>
+                <div class="knn" id="knn" hidden>
+                         Model:    {{ models['1']['Model'] }}, <br>
+                      Accuracy: {{ models['1']['Accuracy'] }}, <br>
+                     Precision:{{ models['1']['Precision'] }}, <br>
+                        Recall:   {{ models['1']['Recall'] }}, <br>
+                      F1-Score: {{ models['1']['F1-Score'] }}, <br>
+                       ROC-AUC:  {{ models['1']['ROC-AUC'] }}
+                </div>
+                <br>
+                <hr>
+                <div class="svc" id="svc" hidden>
+                         Model:    {{ models['2']['Model'] }}, <br>
+                   Accuracy:    {{ models['2']['Accuracy'] }}, <br>
+                 Precision:    {{ models['2']['Precision'] }}, <br>
+                       Recall:    {{ models['2']['Recall'] }}, <br>
+                   F1-Score:    {{ models['2']['F1-Score'] }}, <br>
+                     ROC-AUC:    {{ models['2']['ROC-AUC'] }}
+                </div>
+                <br>
+                <hr>
+                <div class="ds" id="ds" hidden >
+                         Model:    {{ models['3']['Model'] }}, <br>
+                Accuracy:       {{ models['3']['Accuracy'] }}, <br>
+             Precision:        {{ models['3']['Precision'] }}, <br>
+                      Recall:     {{ models['3']['Recall'] }}, <br>
+                F1-Score:       {{ models['3']['F1-Score'] }}, <br>
+                   ROC-AUC:      {{ models['3']['ROC-AUC'] }}
+                </div>
+                <br>
+                <hr>
+                <div class="rf" id="rf" hidden >
+                         Model:    {{ models['4']['Model'] }}, <br>
+             Accuracy:          {{ models['4']['Accuracy'] }}, <br>
+         Precision:            {{ models['4']['Precision'] }}, <br>
+                     Recall:      {{ models['4']['Recall'] }}, <br>
+             F1-Score:          {{ models['4']['F1-Score'] }}, <br>
+                 ROC-AUC:        {{ models['4']['ROC-AUC'] }}
+                </div>
+                <div class="svc">
+
+                </div>
+
+             
+            </div>
+        </div>
+        <div class="evaluation_images">
+            <div class="compare_models" id="compare_models" hidden>
+                <img src="../static/evaluation_results/comparision.png" alt="">
+            </div>
+            <div class="confusion_matrix" id="confusion_matrix_pic" hidden >
+                <img src="../static/imagestrad/confusionmatrix.png" alt="">
+            </div>
+            <div class="plot_results" id="plot_results" hidden>
+                <img src="../static/evaluation_results/scores_graph.png" alt="">
+            </div>
+
+        </div>
+    
+    <script>
+        function compare_models(){
+            document.getElementById('compare_models').removeAttribute('hidden');        }
+        function logress(){
+            document.getElementById('logress').removeAttribute('hidden');        }
+        function knn(){
+            document.getElementById('knn').removeAttribute('hidden');        }
+        function svc(){
+            document.getElementById('svc').removeAttribute('hidden');        }
+        function ds(){
+            document.getElementById('ds').removeAttribute('hidden');        }
+        function rf(){
+            document.getElementById('rf').removeAttribute('hidden');        }
+        function confusion_matrix_pic(){
+            document.getElementById('confusion_matrix_pic').removeAttribute('hidden');        }
+        function plot_results(){
+            document.getElementById('plot_results').removeAttribute('hidden');        }
+    </script>
+   
+</body>
+</html>
+{% endblock %}
+
+

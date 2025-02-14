@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Evaluations</title>
+        <style>
+            .pycaret_evaluations img{
+                width: 500px;
+                height: 300px;
+            }
+            h1{
+                text-align: center;
+            }
+            .traditional_evaluations{
+                text-align: center;
+            }
+        </style>
+    
+</head>
+<body>
+    <h1>Model Evaluations</h1>
+     <div class="pycaret_evaluations">
+        <h2>Pycaret Evaluations</h2>
+         <span>Confusion Matrix:</span>
+         <img src="../static/images/confusion_matrix.png" alt="Confusion Matrix">
+         
+                <span>Feature Importance:</span>
+                <img src="../static/images/feature_importance.png" alt="Feature Importance"><br>
+
+                <span>ROC curve for LGB Model:</span>
+                <img src="../static/images/lgb.png" alt="LGB Model">
+
+                <span>Model Comparision Bar:</span>
+                <img src="../static/images/output.png" alt="Output"><br>
+                
+                <span>Model Comparision plot:</span>
+                <img src="../static/images/models.png" alt="Models">
+
+                <span>Prediction Results:</span>
+                <img src="../static/images/predictions.png" alt="Predictions"><br>
+
+                <span>BestModel Comparison:</span>
+                <img src="../static/images/comparisions_bestmodel.png" alt="Best Model Comparisons">
+            </div>
+
+
+        <div class="traditional_evaluations">
+            <h1>Traditional Evaluations</h1>
+                <span>Confusion Matrix</span>
+                <img src="../static/imagestrad/confusionmatrix.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

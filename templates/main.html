@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    /* Global Styles */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #007bff;
+        border-bottom: 3px solid #007bff;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    ul, ol {
+        padding-left: 20px;
+    }
+
+    ul li, ol li {
+        margin-bottom: 10px;
+    }
+
+    /* FAQ Styling */
+    section div h3 {
+        color: #343a40;
+        margin-top: 10px;
+    }
+
+    /* Contact Section */
+    section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    section ul li {
+        background: #f1f1f1;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    section ul li a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    section ul li a:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container {
+            width: 90%;
+            padding: 15px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+</style>
+
+<div class="container">
+    <!-- Loan Information Section -->
+    <section>
+        <h2>About Loan Approval System</h2>
+        <p>Welcome to our Loan Approval System, where we help you get quick and easy access to personal loans. Whether you're looking to buy a new car, renovate your home, or fund an education, we are here to support your financial goals.</p>
+        <p>Our system uses a simple and transparent process to evaluate loan applications and provide fast decisions. Just fill out the loan application form above, and our team will review it to ensure you get the loan amount you need.</p>
+    </section>
+
+    <!-- Loan Eligibility Criteria -->
+    <section>
+        <h2>Loan Eligibility Criteria</h2>
+        <ul>
+            <li>Must be at least 18 years old</li>
+            <li>Must have a steady source of income (Employed, Self-employed, or Pension)</li>
+            <li>Must have a valid email address and contact information</li>
+            <li>Good credit history is preferred, but not mandatory</li>
+        </ul>
+        <p>Once your application is received, our system will automatically evaluate your eligibility based on these criteria. You will receive an email with the status of your application within 24 hours.</p>
+    </section>
+
+    <!-- Loan Process -->
+    <section>
+        <h2>How the Loan Process Works</h2>
+        <ol>
+            <li><strong>Step 1:</strong> Fill out the loan application form with accurate details.</li>
+            <li><strong>Step 2:</strong> Submit the application for review.</li>
+            <li><strong>Step 3:</strong> Our system evaluates your application and credit profile.</li>
+            <li><strong>Step 4:</strong> You receive an email notification with the loan decision.</li>
+            <li><strong>Step 5:</strong> Upon approval, funds are disbursed directly to your bank account.</li>
+        </ol>
+        <p>Our goal is to make the loan approval process as smooth and fast as possible. You can track the status of your loan application at any time.</p>
+    </section>
+
+    <!-- Frequently Asked Questions (FAQ) -->
+    <section>
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div>
+            <h3>1. How long does the loan approval process take?</h3>
+            <p>The approval process typically takes 24-48 hours, depending on the completeness of your application and verification of your information.</p>
+
+            <h3>2. What happens if I miss a loan repayment?</h3>
+            <p>Missing a payment may result in late fees, and prolonged missed payments may affect your credit rating. Please contact us immediately if you anticipate a delay.</p>
+
+            <h3>3. Can I apply for a loan if I have a low credit score?</h3>
+            <p>While a good credit score is preferred, our system takes multiple factors into account during the evaluation process. You may still be eligible for a loan with a low credit score.</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section>
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance with your application, please don't hesitate to reach out to us:</p>
+        <ul>
+            <li>Email: <a href="mailto:ehteshammd089@gmail.com">ehteshammd089@gmail.com</a></li>
+            <li>Phone: 9700404029</li>
+            <li>Office Hours: Mon-Fri, 9:00 AM - 5:00 PM</li>
+        </ul>
+    </section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Input Form</title>
+    <style>
+        
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 450px;
+            max-width: 100%;
+            margin-left: 35%;
+        
+            
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+        select, input {
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            background: #f9f9f9;
+        }
+        select:focus, input:focus {
+            border-color: #007BFF;
+            outline: none;
+            background: #eef7ff;
+        }
+        button {
+            margin-top: 15px;
+            padding: 14px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group select, .form-group input {
+            width: 100%;
+        }
+        .result {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Check For Loan Approaval Eligibility</h2>
+        <h2>Enter Your Details</h2>
+        <form action="/submit" method="post">
+            <div class="form-group">
+                <label for="income">Income:</label>
+                <input type="text" id="income" name="income" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <select id="age" name="age" required></select>
+            </div>
+            
+            <div class="form-group">
+                <label for="experience">Experience (Years):</label>
+                <select id="experience" name="experience" required></select>
+            </div>
+            
+            <div class="form-group">
+                <label for="marital_status">Marital Status:</label>
+                <select id="marital_status" name="marital_status" required>
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="house_ownership">House Ownership:</label>
+                <select id="house_ownership" name="house_ownership" required>
+                    <option value="own">Own</option>
+                    <option value="rent">Rent</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="car_ownership">Car Ownership:</label>
+                <select id="car_ownership" name="car_ownership" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="profession">Profession:</label>
+                <select id="profession" name="profession" required>
+                    <option value="Software_Developer">Software Developer</option>
+                    <option value="Civil_Engineer">Civil Engineer</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Artist">Artist</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="current_job_yrs">Current Job Years:</label>
+                <select id="current_job_yrs" name="current_job_yrs" required></select>
+            </div>
+            
+            <div class="form-group">
+                <label for="current_house_yrs">Current House Years:</label>
+                <select id="current_house_yrs" name="current_house_yrs" required></select>
+            </div>
+            
+            <div class="form-group">
+                <label for="model_selection">Use Model:</label>
+                <select id="model_selection" name="model_selection" required>
+                    <option value="">Select Model</option>
+                    <option value="0">Traditional ML Model</option>
+                    <option value="1">Pycaret Automation Tool Model</option>
+                </select>
+            </div>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <div class="result">
+            <h2>Prediction is {{ result }}</h2>
+        </div>
+    </div>
+    <script>
+        function populateSelect(id, min, max) {
+            let select = document.getElementById(id);
+            for (let i = min; i <= max; i++) {
+                let option = document.createElement("option");
+                option.value = i;
+                option.text = i;
+                select.appendChild(option);
+            }
+        }
+        populateSelect("age", 18, 100);
+        populateSelect("experience", 0, 50);
+        populateSelect("current_job_yrs", 0, 40);
+        populateSelect("current_house_yrs", 0, 50);
+    </script>
+</body>
+</html>
+
+{% endblock %}

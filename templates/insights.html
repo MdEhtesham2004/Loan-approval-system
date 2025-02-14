@@ -1,14 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .dashboard img{
+            width: 1000px;
+            height: 550px;
+            margin-left: 250px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <h2>EDA and Dashboard Part!</h2>
+    <h2>Comming Soon!</h2>
+    <h2>please Wait..</h2>
+    
+    
+    Dashboard:
+    <div class="dashboard">
+        <!-- <img src="../dashboard/dashboard.png" alt=""> -->
+        <img src="{{ url_for('static', filename='dashboard.png') }}" alt="Dashboard Image">
 
-<h2>EDA and Dashboard Part!</h2>
-<h2>Comming Soon!</h2>
-<h2>please Wait..</h2>
+    </div>
 
-
-
-<div class="dashboard">
-    <img src="../dashboard/dashboard.png" alt="">
-</div>
-
+</body>
+</html>
 {% endblock %}

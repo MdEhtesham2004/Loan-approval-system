@@ -56,12 +56,17 @@ Open `http://127.0.0.1:5000/` in your browser to use the loan approval system.
 
 ## Screenshots  
 
-  
+### Feature Importance  
 ![feature_importance](https://github.com/user-attachments/assets/50ea1671-f09e-426c-b80b-ecadc3095799)
 
+### Comparisons
 ![output](https://github.com/user-attachments/assets/7a59b884-d72d-4ceb-91e1-07831f7909f9)
+### Predictions
 ![predictions](https://github.com/user-attachments/assets/2f8210ee-37e1-4867-bdf8-18bf1cfffea2)
+
+### Confusion Matrix
 ![confusionmatrix](https://github.com/user-attachments/assets/5dfb26fc-8ef6-4658-9a8e-e5472ff4b8d6)
+### Interactive Dashboard
 ![dashboard](https://github.com/user-attachments/assets/b52c3a14-e451-484b-ab50-53e9ed5ba891)
 
 ## Contribution  

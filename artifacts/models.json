@@ -25,11 +25,11 @@
     },
     "3": {
         "Model": "DecisionTreeClassifier()",
-        "Accuracy": 0.735,
-        "Precision": 0.2962962962962963,
-        "Recall": 0.1904761904761904,
-        "F1-Score": 0.2318840579710145,
-        "ROC-AUC": 0.5351115129596142
+        "Accuracy": 0.71,
+        "Precision": 0.2142857142857142,
+        "Recall": 0.1428571428571428,
+        "F1-Score": 0.1714285714285714,
+        "ROC-AUC": 0.5018083182640144
     },
     "4": {
         "Model": "RandomForestClassifier()",

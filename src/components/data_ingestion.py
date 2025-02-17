@@ -6,6 +6,7 @@ from src.logger import logging
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass 
 from src.components.data_transformation import DataTransformation
+from src.pipeline.train_pipeline import TrainPipeline
 
 from src.components.model_trainer import ModelTrainer
 
@@ -63,4 +64,5 @@ if __name__ == "__main__":
     f1,acc = model_trainer.initiate_model_trainer(X_train,y_train,X_test,y_test)
     logging.info(f"The result evalution matrics are f1: {f1}, acc: {acc}")
     print(f"The result evalution matrics are f1: {f1}, acc: {acc}")
+    train_pipeline = TrainPipeline()
 
